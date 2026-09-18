@@ -3,48 +3,707 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Flashbeat</title>
+    <title>Privacy Policy / Política de Privacidad - Flashbeat</title>
+    <meta name="description" content="Official Privacy Policy for Flashbeat: LED Flashlight Beat Android Application.">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9fafb; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { color: #111827; border-bottom: 2px solid #ffb703; padding-bottom: 10px; }
-        h2 { color: #1f2937; margin-top: 25px; }
-        p, li { color: #4b5563; }
-        .highlight { background-color: #fef3c7; padding: 12px; border-left: 4px solid #f59e0b; border-radius: 4px; margin: 15px 0; }
-        footer { margin-top: 30px; text-align: center; font-size: 0.85em; color: #9ca3af; }
+        :root {
+            --primary: #f59e0b;
+            --primary-hover: #d97706;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --highlight-bg: #1e2e4a;
+            --highlight-border: #3b82f6;
+            --tag-bg: #27272a;
+            --code-bg: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header & App Badge */
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.12);
+            color: var(--primary);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: 1.85rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Language Switcher Tabs */
+        .tabs-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 24px 0 28px 0;
+            background: rgba(30, 41, 59, 0.8);
+            padding: 8px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: #000000;
+            border-color: var(--primary);
+            box-shadow: 0 2px 10px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Content Card */
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .lang-content {
+            display: none;
+            animation: fadeIn 0.25s ease-in-out;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .meta-info {
+            background: rgba(15, 23, 42, 0.6);
+            border-left: 4px solid var(--primary);
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .meta-info strong {
+            color: var(--text-main);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: #ffffff;
+            margin: 28px 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            color: #f1f5f9;
+            margin: 18px 0 8px 0;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #cbd5e1;
+        }
+
+        ul, ol {
+            margin: 10px 0 16px 22px;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: var(--code-bg);
+            color: #fcd34d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.88em;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .box-highlight {
+            background: var(--highlight-bg);
+            border: 1px solid var(--highlight-border);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .box-highlight h3 {
+            color: #93c5fd;
+            margin-top: 0;
+        }
+
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .content-card {
+                padding: 24px 18px;
+            }
+            .tab-btn {
+                padding: 6px 12px;
+                font-size: 0.82rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="card">
-    <h1>Política de Privacidad de Flashbeat</h1>
-    <p><strong>Última actualización:</strong> Septiembre 2026</p>
 
-    <p>Esta Política de Privacidad describe cómo <strong>Flashbeat: Linterna LED & Ritmo</strong> (en adelante, "la Aplicación") recopila, utiliza y protege la información del usuario.</p>
+<div class="wrapper">
+    <header>
+        <div class="app-badge">⚡ Flashbeat Official Privacy Center</div>
+        <h1>Flashbeat: LED Flashlight Beat</h1>
+        <p class="subtitle">Google Play Package: <code>com.flashbeat.flashlight.torch.led</code></p>
+    </header>
 
-    <h2>1. Permiso de Micrófono (RECORD_AUDIO)</h2>
-    <div class="highlight">
-        <p><strong>Divulgación Destacada:</strong> El permiso de micrófono solo se solicita y se utiliza de forma voluntaria para el <strong>Modo Ritmo Musical</strong>.</p>
-        <p>El audio ambiental capturado se analiza <strong>únicamente en tiempo real</strong> en la memoria RAM del dispositivo para calcular los picos de sonido y sincronizar los destellos del LED. <strong>En ningún caso el audio se graba, almacena, transmite ni comparte</strong> con ningún servidor propio ni de terceros.</p>
+    <!-- Language Selector Navigation -->
+    <nav class="tabs-container" aria-label="Language Selector">
+        <button class="tab-btn active" onclick="switchLang('es', this)" data-lang="es">🇪🇸 Español</button>
+        <button class="tab-btn" onclick="switchLang('en', this)" data-lang="en">🇬🇧 English</button>
+        <button class="tab-btn" onclick="switchLang('fr', this)" data-lang="fr">🇫🇷 Français</button>
+        <button class="tab-btn" onclick="switchLang('it', this)" data-lang="it">🇮🇹 Italiano</button>
+        <button class="tab-btn" onclick="switchLang('pt', this)" data-lang="pt">🇵🇹 Português</button>
+        <button class="tab-btn" onclick="switchLang('ja', this)" data-lang="ja">🇯🇵 日本語</button>
+    </nav>
+
+    <div class="content-card">
+
+        <!-- ============================================================ -->
+        <!-- 🇪🇸 ESPAÑOL -->
+        <!-- ============================================================ -->
+        <article id="lang-es" class="lang-content active">
+            <div class="meta-info">
+                <strong>Última actualización:</strong> 18 de septiembre de 2026 &nbsp;|&nbsp; 
+                <strong>Aplicación:</strong> Flashbeat: LED Flashlight Beat &nbsp;|&nbsp; 
+                <strong>Versión:</strong> 1.0 (Android)
+            </div>
+
+            <p>Esta Política de Privacidad describe de manera transparente cómo <strong>Flashbeat: LED Flashlight Beat</strong> (en adelante, "la Aplicación", "nosotros" o "nuestro") trata la información de los usuarios al utilizar nuestra aplicación móvil para Android.</p>
+
+            <p>Nos comprometemos a garantizar la máxima protección de su privacidad. Nuestra aplicación está diseñada bajo el principio de <em>privacidad por diseño</em>: opera de forma 100% local en su dispositivo para todas sus funciones principales y <strong>no recopila, no vende ni almacena datos personales identificables</strong>.</p>
+
+            <h2>1. Permisos del Dispositivo y su Finalidad Exacta</h2>
+            <p>Para proporcionar sus funciones de iluminación y efectos dinámicos, la Aplicación solicita únicamente los permisos técnicos estrictamente necesarios:</p>
+
+            <div class="box-highlight">
+                <h3>A. Permiso de Micrófono / Grabación de Audio (<code>android.permission.RECORD_AUDIO</code>)</h3>
+                <ul>
+                    <li><strong>Uso exclusivo:</strong> Se utiliza únicamente para la función interactiva de <strong>Modo Ritmo Musical (Sincronización con Sonido)</strong>.</li>
+                    <li><strong>Procesamiento en memoria volátil (efímero):</strong> La aplicación analiza exclusivamente amplitudes acústicas en la memoria RAM de su teléfono para sincronizar los destellos luminosos con el compás del sonido.</li>
+                    <li><strong>Garantía de privacidad absoluta:</strong> <strong>NO se graba voz ni conversaciones</strong>, <strong>NO se guarda ningún archivo de audio</strong> y <strong>NO se transmite audio a ningún servidor externo ni a terceros</strong>. El procesamiento es inmediato y se descarta al milisegundo.</li>
+                </ul>
+            </div>
+
+            <h3>B. Control del Flash de la Cámara (<code>android.hardware.camera.flash</code>)</h3>
+            <ul>
+                <li><strong>Finalidad:</strong> Encender y apagar el diodo LED de luz de la cámara trasera y regular su intensidad de brillo en dispositivos compatibles.</li>
+                <li><strong>Sin captura óptica:</strong> La aplicación <strong>NO</strong> tiene acceso a la cámara fotográfica, no captura imágenes ni graba vídeo.</li>
+            </ul>
+
+            <h3>C. Vibración del Dispositivo (<code>android.permission.VIBRATE</code>)</h3>
+            <ul>
+                <li><strong>Finalidad:</strong> Proporcionar respuesta táctil háptica breve al pulsar interruptores y botones dentro de la interfaz.</li>
+            </ul>
+
+            <h3>D. Bloqueo de Suspensión (<code>android.permission.WAKE_LOCK</code>)</h3>
+            <ul>
+                <li><strong>Finalidad:</strong> Mantener encendida la linterna de forma continua según la preferencia del usuario, impidiendo que el teléfono apague la luz al entrar en modo de suspensión automática.</li>
+            </ul>
+
+            <h3>E. Conexión a Internet y Estado de Red (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+            <ul>
+                <li><strong>Finalidad:</strong> Requerido exclusivamente para la carga de anuncios publicitarios a través de la red certificada de Google AdMob y para la verificación de compras integradas mediante Google Play Billing.</li>
+            </ul>
+
+            <h2>2. Servicios de Terceros y Publicidad</h2>
+            <p>La Aplicación integra servicios certificados de Google para monetización y pagos:</p>
+
+            <h3>Google AdMob (Google LLC)</h3>
+            <ul>
+                <li>Utilizamos Google AdMob para servir anuncios en la versión gratuita. AdMob puede recopilar y procesar identificadores publicitarios (como el GAID), datos de rendimiento y diagnóstico técnico para mostrar anuncios pertinentes o medir su eficacia.</li>
+                <li>En la Unión Europea y Reino Unido, la aplicación integra el sistema de consentimiento oficial de Google (CMP / UMP) conforme al RGPD / Directiva ePrivacy.</li>
+                <li>Para más información, consulte la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a> y las <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Políticas de Publicidad de Google</a>.</li>
+            </ul>
+
+            <h3>Facturación de Google Play (Google Play In-App Billing)</h3>
+            <ul>
+                <li>La compra opcional "Versión PRO / Eliminar Publicidad" se procesa íntegramente a través de la pasarela de pagos de Google Play.</li>
+                <li>Nosotros <strong>NUNCA</strong> tenemos acceso a sus números de tarjeta, cuentas bancarias ni información de pago personal.</li>
+            </ul>
+
+            <h2>3. Almacenamiento y Seguridad de los Datos</h2>
+            <ul>
+                <li><strong>Sin registro de cuentas:</strong> No requiere usuario, contraseña, correo electrónico ni número de teléfono.</li>
+                <li><strong>Sin servidores propios:</strong> No recopilamos registros en bases de datos remotas. Sus ajustes de la aplicación (como color de pantalla preferido o frecuencia del estrobo) se guardan únicamente dentro del almacenamiento local seguro de su teléfono.</li>
+            </ul>
+
+            <h2>4. Privacidad de Menores (COPPA / GDPR-K)</h2>
+            <p>Nuestra Aplicación no está dirigida expresamente a menores de 13 años (o la edad mínima aplicable en su territorio) ni recopila deliberadamente información sobre menores.</p>
+
+            <h2>5. Sus Derechos de Privacidad (RGPD, CCPA, LGPD)</h2>
+            <p>Conforme a la normativa internacional de protección de datos, usted tiene derecho a acceder, rectificar, limitar o revocar el consentimiento del uso de identificadores publicitarios en cualquier momento desde los ajustes de su sistema Android (Ajustes &gt; Google &gt; Anuncios) o desinstalando la aplicación.</p>
+
+            <h2>6. Contacto y Soporte</h2>
+            <p>Si tiene cualquier consulta relativa a esta Política de Privacidad, puede contactarnos a través de:</p>
+            <ul>
+                <li><strong>Correo de soporte:</strong> <code>support@templyon.com</code></li>
+                <li><strong>Desarrollador:</strong> Templyon</li>
+            </ul>
+        </article>
+
+        <!-- ============================================================ -->
+        <!-- 🇬🇧 ENGLISH -->
+        <!-- ============================================================ -->
+        <article id="lang-en" class="lang-content">
+            <div class="meta-info">
+                <strong>Last Updated:</strong> September 18, 2026 &nbsp;|&nbsp; 
+                <strong>App:</strong> Flashbeat: LED Flashlight Beat &nbsp;|&nbsp; 
+                <strong>Version:</strong> 1.0 (Android)
+            </div>
+
+            <p>This Privacy Policy describes how <strong>Flashbeat: LED Flashlight Beat</strong> ("the App", "we", "us", or "our") handles user information when you use our mobile application on Android.</p>
+
+            <p>We are committed to maintaining the highest level of privacy protection. Our app is built on a <em>Privacy by Design</em> architecture: core functions execute 100% locally on your device and <strong>we do not collect, sell, or store personally identifiable information</strong>.</p>
+
+            <h2>1. Device Permissions and Exact Usage</h2>
+            <p>To deliver high-performance lighting and audio-visual synchronization, the App requests only strictly necessary permissions:</p>
+
+            <div class="box-highlight">
+                <h3>A. Microphone / Audio Recording Permission (<code>android.permission.RECORD_AUDIO</code>)</h3>
+                <ul>
+                    <li><strong>Exclusive Purpose:</strong> Used solely for the interactive <strong>Music Beat Synchronization Mode (Flashbeat)</strong>.</li>
+                    <li><strong>Ephemeral In-Memory Processing:</strong> The app analyzes real-time sound amplitude and frequency variations exclusively within your device's volatile RAM to sync light pulses with audio.</li>
+                    <li><strong>Absolute Privacy Guarantee:</strong> <strong>NO voice or conversation is recorded</strong>, <strong>NO audio files are saved</strong>, and <strong>NO audio is transmitted</strong> to external servers or third parties. Sound data is processed instantly and discarded within milliseconds.</li>
+                </ul>
+            </div>
+
+            <h3>B. Camera Flash Control (<code>android.hardware.camera.flash</code>)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Used exclusively to turn on/off the rear camera LED torch and adjust hardware brightness levels where supported.</li>
+                <li><strong>Zero Optical Capture:</strong> The App does <strong>NOT</strong> access image sensors, take photos, or record video.</li>
+            </ul>
+
+            <h3>C. Haptic Vibration (<code>android.permission.VIBRATE</code>)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Provides tactical haptic feedback when pressing buttons and interactive controls.</li>
+            </ul>
+
+            <h3>D. Prevent Phone from Sleeping (<code>android.permission.WAKE_LOCK</code>)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Keeps the flashlight on continuously per user choice, preventing Android from shutting off the torch when the screen sleeps.</li>
+            </ul>
+
+            <h3>E. Internet & Network State (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Required strictly to serve advertisements via Google AdMob and process in-app purchase verifications via Google Play Billing.</li>
+            </ul>
+
+            <h2>2. Third-Party Services and Advertising</h2>
+            <p>The App integrates certified Google partner SDKs:</p>
+
+            <h3>Google AdMob (Google LLC)</h3>
+            <ul>
+                <li>Used to display ads in the free version. Google AdMob may automatically collect device advertising IDs (such as GAID), crash analytics, and diagnostic logs to provide relevant ads or assess campaign performance.</li>
+                <li>In the EEA and UK, the App integrates the official Google User Messaging Platform (UMP) CMP for GDPR and ePrivacy consent management.</li>
+                <li>For details, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Technologies</a>.</li>
+            </ul>
+
+            <h3>Google Play In-App Billing</h3>
+            <ul>
+                <li>The optional "PRO Version / Remove Ads" upgrade is processed exclusively by Google Play's secure payment infrastructure.</li>
+                <li>We <strong>NEVER</strong> have access to your credit card numbers, billing addresses, or banking details.</li>
+            </ul>
+
+            <h2>3. Data Retention and Security</h2>
+            <ul>
+                <li><strong>No User Accounts:</strong> No signup, name, email, or telephone number is ever collected.</li>
+                <li><strong>No Remote Databases:</strong> We do not operate external database servers for tracking. App preferences (like strobe frequency or screen colors) remain stored locally on your device.</li>
+            </ul>
+
+            <h2>4. Children's Privacy (COPPA / GDPR-K)</h2>
+            <p>Our App is not directed at children under the age of 13, and we do not knowingly collect personal information from children.</p>
+
+            <h2>5. Your Privacy Rights (GDPR, CCPA, CPRA)</h2>
+            <p>Depending on your region, you have the right to opt-out of personalized advertising at any time through your Android device settings (Settings &gt; Google &gt; Ads) or by uninstalling the application.</p>
+
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
+            <ul>
+                <li><strong>Support Email:</strong> <code>support@templyon.com</code></li>
+                <li><strong>Developer:</strong> Templyon</li>
+            </ul>
+        </article>
+
+        <!-- ============================================================ -->
+        <!-- 🇫🇷 FRANÇAIS -->
+        <!-- ============================================================ -->
+        <article id="lang-fr" class="lang-content">
+            <div class="meta-info">
+                <strong>Dernière mise à jour :</strong> 18 septembre 2026 &nbsp;|&nbsp; 
+                <strong>Application :</strong> Flashbeat: LED Flashlight Beat &nbsp;|&nbsp; 
+                <strong>Version :</strong> 1.0 (Android)
+            </div>
+
+            <p>Cette Politique de Confidentialité décrit la manière dont <strong>Flashbeat: LED Flashlight Beat</strong> (« l'Application », « nous » ou « notre ») gère les informations des utilisateurs lors de l'utilisation de notre application mobile Android.</p>
+
+            <p>Nous nous engageons à respecter scrupuleusement votre vie privée. Flashbeat repose sur le principe de <em>confidentialité dès la conception</em> : l'intégralité des fonctionnalités opère localement sur votre téléphone et <strong>nous ne collectons, ne vendons et ne stockons aucune donnée personnelle identifiable</strong>.</p>
+
+            <h2>1. Autorisations de l'Appareil et Utilisations</h2>
+
+            <div class="box-highlight">
+                <h3>A. Autorisation du Microphone / Audio (<code>android.permission.RECORD_AUDIO</code>)</h3>
+                <ul>
+                    <li><strong>Usage exclusif :</strong> Utilisé uniquement pour le <strong>Mode Rythme Musical</strong> (synchronisation lumineuse avec le son).</li>
+                    <li><strong>Traitement éphémère en mémoire vive (RAM) :</strong> L'application analyse uniquement l'amplitude sonore en temps réel sur la mémoire vive de votre smartphone afin de synchroniser les flashs avec le rythme musical.</li>
+                    <li><strong>Garantie absolue :</strong> <strong>AUCUN enregistrement vocal</strong>, <strong>AUCUN stockage de fichier audio</strong> et <strong>AUCUNE transmission sur Internet</strong> vers des serveurs distants. Les signaux sont traités et effacés instantanément en quelques millisecondes.</li>
+                </ul>
+            </div>
+
+            <h3>B. Contrôle du Flash de la Caméra (<code>android.hardware.camera.flash</code>)</h3>
+            <ul>
+                <li><strong>Finalité :</strong> Allumer et éteindre la LED arrière et régler son niveau d'intensité sur les appareils compatibles.</li>
+                <li><strong>Aucune capture d'image :</strong> L'Application n'a <strong>aucun accès</strong> au capteur photo et n'enregistre aucune photo ni vidéo.</li>
+            </ul>
+
+            <h3>C. Vibration de l'Appareil (<code>android.permission.VIBRATE</code>)</h3>
+            <ul>
+                <li><strong>Finalité :</strong> Fournir un retour haptique lors de l'activation des boutons tactiles.</li>
+            </ul>
+
+            <h3>D. Maintien de l'Éveil (<code>android.permission.WAKE_LOCK</code>)</h3>
+            <ul>
+                <li><strong>Finalité :</strong> Garder la lampe torche allumée de façon continue sans interruption lorsque l'écran s'éteint.</li>
+            </ul>
+
+            <h3>E. Connexion Internet et État du Réseau (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+            <ul>
+                <li><strong>Finalité :</strong> Nécessaire uniquement pour l'affichage de bannières publicitaires via Google AdMob et la validation des achats intégrés Google Play.</li>
+            </ul>
+
+            <h2>2. Services Tiers et Publicités</h2>
+            <h3>Google AdMob (Google LLC)</h3>
+            <p>Dans la version gratuite, nous utilisons Google AdMob. AdMob peut collecter des identifiants publicitaires (comme le GAID) et des données techniques de diagnostic conformément au RGPD. Pour en savoir plus, consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.</p>
+
+            <h3>Facturation Google Play</h3>
+            <p>L'achat facultatif « Version PRO / Sans publicité » est sécurisé et géré entièrement par Google LLC. Nous n'avons jamais accès à vos coordonnées bancaires.</p>
+
+            <h2>3. Vos Droits (RGPD) et Contact</h2>
+            <p>Vous pouvez à tout moment gérer vos préférences publicitaires dans les paramètres Android de votre appareil (Paramètres &gt; Google &gt; Annonces). Pour toute question :</p>
+            <ul>
+                <li><strong>Email de support :</strong> <code>support@templyon.com</code></li>
+                <li><strong>Développeur :</strong> Templyon</li>
+            </ul>
+        </article>
+
+        <!-- ============================================================ -->
+        <!-- 🇮🇹 ITALIANO -->
+        <!-- ============================================================ -->
+        <article id="lang-it" class="lang-content">
+            <div class="meta-info">
+                <strong>Ultimo aggiornamento:</strong> 18 settembre 2026 &nbsp;|&nbsp; 
+                <strong>Applicazione:</strong> Flashbeat: LED Flashlight Beat &nbsp;|&nbsp; 
+                <strong>Versione:</strong> 1.0 (Android)
+            </div>
+
+            <p>Questa Informativa sulla Privacy descrive come <strong>Flashbeat: LED Flashlight Beat</strong> («l'Applicazione», «noi» o «nostro») tratta le informazioni degli utenti durante l'utilizzo dell'app per Android.</p>
+
+            <p>La vostra privacy è la nostra massima priorità. Flashbeat è progettata secondo i principi di <em>Privacy by Design</em>: tutte le funzionalità principali vengono elaborate localmente sul dispositivo e <strong>non raccogliamo, vendiamo né archiviamo dati personali identificabili</strong>.</p>
+
+            <h2>1. Autorizzazioni del Dispositivo e Finalità</h2>
+
+            <div class="box-highlight">
+                <h3>A. Autorizzazione Microfono / Audio (<code>android.permission.RECORD_AUDIO</code>)</h3>
+                <ul>
+                    <li><strong>Scopo esclusivo:</strong> Utilizzato unicamente per la funzione interattiva di <strong>Sincronizzazione a Ritmo di Musica</strong>.</li>
+                    <li><strong>Elaborazione effimera in memoria RAM:</strong> L'app rileva esclusivamente le ampiezze sonore in tempo reale nella memoria volatile del telefono per sincronizzare i flash luminosi.</li>
+                    <li><strong>Garanzia di riservatezza totale:</strong> <strong>NESSUNA registrazione vocale</strong>, <strong>NESSUN salvataggio di file audio</strong> e <strong>NESSUNA trasmissione via Internet</strong> verso server esterni. Il segnale viene elaborato e scartato istantaneamente.</li>
+                </ul>
+            </div>
+
+            <h3>B. Controllo Flash della Fotocamera (<code>android.hardware.camera.flash</code>)</h3>
+            <ul>
+                <li><strong>Finalità:</strong> Accensione/spegnimento del LED posteriore e regolazione della luminosità sui telefoni supportati. Nessun accesso ai sensori fotografici.</li>
+            </ul>
+
+            <h3>C. Vibrazione e WakeLock (<code>VIBRATE</code>, <code>WAKE_LOCK</code>)</h3>
+            <ul>
+                <li><strong>Finalità:</strong> Feedback tattile aptico e mantenimento dell'illuminazione anche con display bloccato.</li>
+            </ul>
+
+            <h3>D. Connessione Internet (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+            <ul>
+                <li><strong>Finalità:</strong> Caricamento degli annunci certificati Google AdMob e gestione degli acquisti in-app tramite Google Play.</li>
+            </ul>
+
+            <h2>2. Servizi di Terze Parti</h2>
+            <p>Utilizziamo Google AdMob per la monetizzazione e Google Play Billing per la versione Pro (senza annunci). Non conserviamo né abbiamo accesso ai vostri dati di pagamento bancario.</p>
+
+            <h2>3. Contatto</h2>
+            <ul>
+                <li><strong>Email di supporto:</strong> <code>support@templyon.com</code></li>
+                <li><strong>Sviluppatore:</strong> Templyon</li>
+            </ul>
+        </article>
+
+        <!-- ============================================================ -->
+        <!-- 🇵🇹 PORTUGUÊS -->
+        <!-- ============================================================ -->
+        <article id="lang-pt" class="lang-content">
+            <div class="meta-info">
+                <strong>Última atualização:</strong> 18 de setembro de 2026 &nbsp;|&nbsp; 
+                <strong>Aplicação:</strong> Flashbeat: LED Flashlight Beat &nbsp;|&nbsp; 
+                <strong>Versão:</strong> 1.0 (Android)
+            </div>
+
+            <p>Esta Política de Privacidade descreve como o <strong>Flashbeat: LED Flashlight Beat</strong> («a Aplicação», «nós» ou «nosso») trata as informações dos utilizadores ao usar nossa aplicação móvel para Android.</p>
+
+            <p>Garantimos a máxima proteção da sua privacidade. O Flashbeat adota o padrão de <em>Privacidade por Padrão</em>: opera 100% localmente no seu dispositivo e <strong>não recolhe, vende ou armazena dados pessoais identificáveis</strong>.</p>
+
+            <h2>1. Permissões do Dispositivo e Finalidades</h2>
+
+            <div class="box-highlight">
+                <h3>A. Permissão de Microfone / Gravação de Áudio (<code>android.permission.RECORD_AUDIO</code>)</h3>
+                <ul>
+                    <li><strong>Finalidade Exclusiva:</strong> Usada apenas para o <strong>Modo Ritmo Musical (Flashbeat)</strong>.</li>
+                    <li><strong>Processamento efémero na memória RAM:</strong> A aplicação analisa apenas variações de amplitude sonora em tempo real na memória volátil para sincronizar os flashes com a música.</li>
+                    <li><strong>Garantia de privacidade total:</strong> <strong>NÃO grava voz nem conversas</strong>, <strong>NÃO guarda ficheiros de áudio</strong> e <strong>NÃO transmite dados de áudio pela Internet</strong>. Os dados são eliminados instantaneamente.</li>
+                </ul>
+            </div>
+
+            <h3>B. Controlo do Flash (<code>android.hardware.camera.flash</code>)</h3>
+            <ul>
+                <li><strong>Finalidade:</strong> Ligar/desligar o LED da câmara e regular o brilho. A aplicação <strong>NÃO</strong> acede à lente para tirar fotos nem gravar vídeos.</li>
+            </ul>
+
+            <h3>C. Vibração e Manutenção de Ativação (<code>VIBRATE</code>, <code>WAKE_LOCK</code>)</h3>
+            <ul>
+                <li><strong>Finalidade:</strong> Resposta háptica ao toque e manter a luz ligada com o ecrã desligado.</li>
+            </ul>
+
+            <h3>D. Acesso à Internet (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+            <ul>
+                <li><strong>Finalidade:</strong> Exibição de anúncios através do Google AdMob e validação de compras no Google Play.</li>
+            </ul>
+
+            <h2>2. Serviços de Terceiros e Contacto</h2>
+            <p>Em conformidade com a LGPD e o RGPD, você tem controlo total sobre seus identificadores de anúncios nas configurações do Android. Para dúvidas e suporte:</p>
+            <ul>
+                <li><strong>E-mail de suporte:</strong> <code>support@templyon.com</code></li>
+                <li><strong>Programador:</strong> Templyon</li>
+            </ul>
+        </article>
+
+        <!-- ============================================================ -->
+        <!-- 🇯🇵 日本語 -->
+        <!-- ============================================================ -->
+        <article id="lang-ja" class="lang-content">
+            <div class="meta-info">
+                <strong>最終更新日：</strong> 2026年9月18日 &nbsp;|&nbsp; 
+                <strong>アプリ名：</strong> Flashbeat: LED Flashlight Beat &nbsp;|&nbsp; 
+                <strong>バージョン：</strong> 1.0 (Android)
+            </div>
+
+            <p>本プライバシーポリシーは、<strong>Flashbeat: LED Flashlight Beat</strong>（以下「本アプリ」または「当方」）における、ユーザー情報の取り扱いおよびプライバシー保護方針について説明するものです。</p>
+
+            <p>当方はユーザーのプライバシー保護を最優先事項としています。本アプリは<em>プライバシー・バイ・デザイン</em>に基づいて設計されており、主要機能はすべて端末内で完結して動作し、<strong>個人を特定できる情報を収集、販売、外部保存することは一切ありません</strong>。</p>
+
+            <h2>1. 使用する端末権限とその詳細な目的</h2>
+
+            <div class="box-highlight">
+                <h3>A. マイク・音声録音権限 (<code>android.permission.RECORD_AUDIO</code>)</h3>
+                <ul>
+                    <li><strong>使用目的：</strong> <strong>音楽リズム同期モード（Flashbeat）</strong>でのみ使用されます。</li>
+                    <li><strong>端末内一時メモリ（RAM）でのリアルタイム処理：</strong> 周囲の音響の振幅・周波数の変化をスマートフォンのRAMメモリ上でのみ高速解析し、音楽のビートに合わせてライトを点滅させます。</li>
+                    <li><strong>完全なプライバシー保証：</strong> <strong>音声や会話を録音・保存することは一切なく</strong>、<strong>外部サーバーや第三者に音声を送信することも絶対にありません</strong>。データは解析後ミリ秒単位で破棄されます。</li>
+                </ul>
+            </div>
+
+            <h3>B. カメラフラッシュ制御 (<code>android.hardware.camera.flash</code>)</h3>
+            <ul>
+                <li><strong>目的：</strong> 背面LEDライトの点灯・消灯および明るさ調整。カメラレンズによる写真撮影や動画録画の機能は一切含まれていません。</li>
+            </ul>
+
+            <h3>C. バイブレーション (<code>android.permission.VIBRATE</code>)</h3>
+            <ul>
+                <li><strong>目的：</strong> ボタン操作時の触覚フィードバック（振動）の提供。</li>
+            </ul>
+
+            <h3>D. スリープの無効化 (<code>android.permission.WAKE_LOCK</code>)</h3>
+            <ul>
+                <li><strong>目的：</strong> 画面消灯時やスリープ状態でもライトを継続して点灯させるため。</li>
+            </ul>
+
+            <h3>E. インターネット接続 (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</h3>
+            <ul>
+                <li><strong>目的：</strong> Google AdMobによる広告配信、およびGoogle Play請求サービスによる有料機能（広告非表示）の購入処理。</li>
+            </ul>
+
+            <h2>2. 第三者配信サービス</h2>
+            <p>本アプリはGoogle AdMob（広告）およびGoogle Play Billing（アプリ内課金）を利用しています。クレジットカード情報などの決済情報を当方が収集・保持することは一切ありません。</p>
+
+            <h2>3. お問い合わせ窓口</h2>
+            <p>プライバシーポリシーに関するご質問やご不明な点がございましたら、下記までお気軽にお問い合わせください。</p>
+            <ul>
+                <li><strong>サポート窓口：</strong> <code>support@templyon.com</code></li>
+                <li><strong>開発者：</strong> Templyon</li>
+            </ul>
+        </article>
+
     </div>
 
-    <h2>2. Permiso de Cámara y Flash</h2>
-    <p>La Aplicación solicita acceso a la funcionalidad de la cámara exclusivamente para controlar el hardware del <strong>diodo LED / Flash</strong> del dispositivo. La Aplicación nunca accede a la lente, no toma fotografías ni graba vídeo.</p>
-
-    <h2>3. Publicidad de Terceros (Google AdMob)</h2>
-    <p>La versión gratuita de la Aplicación muestra publicidad mediante el servicio <strong>Google AdMob</strong>. AdMob puede recopilar y procesar identificadores publicitarios (Advertising ID) y datos técnicos del dispositivo para mostrar anuncios relevantes y prevenir el fraude publicitario, de conformidad con sus políticas:</p>
-    <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a></p>
-
-    <h2>4. Compras Integradas (Versión PRO)</h2>
-    <p>Las transacciones para desbloquear la versión PRO sin anuncios se procesan de forma 100% segura y cifrada a través de la pasarela de <strong>Google Play Billing</strong>. Nosotros no recopilamos ni tenemos acceso a los datos bancarios ni números de tarjeta del usuario.</p>
-
-    <h2>5. Seguridad y Derechos del Usuario (RGPD)</h2>
-    <p>La Aplicación no recopila datos personales identificables (como nombres, correos o números de teléfono). Puedes revocar cualquier permiso de la aplicación en cualquier momento desde los Ajustes de tu dispositivo Android.</p>
-
-    <h2>6. Contacto</h2>
-    <p>Si tienes cualquier duda sobre esta política de privacidad, puedes contactarnos a través de Google Play Store.</p>
+    <footer class="footer">
+        <p>&copy; 2026 Templyon. All rights reserved. Flashbeat is an independent utility application.</p>
+    </footer>
 </div>
-<footer>
-    <p>© 2026 Flashbeat. Todos los derechos reservados.</p>
-</footer>
+
+<script>
+    // Tab switching function
+    function switchLang(lang, buttonElement) {
+        // Hide all lang articles
+        const contents = document.querySelectorAll('.lang-content');
+        contents.forEach(el => el.classList.remove('active'));
+
+        // Deactivate all buttons
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Show target article
+        const targetArticle = document.getElementById('lang-' + lang);
+        if (targetArticle) {
+            targetArticle.classList.add('active');
+        }
+
+        // Highlight clicked button
+        if (buttonElement) {
+            buttonElement.classList.add('active');
+        } else {
+            const btn = document.querySelector(`.tab-btn[data-lang="${lang}"]`);
+            if (btn) btn.classList.add('active');
+        }
+
+        // Update URL hash without reload
+        if (history.replaceState) {
+            history.replaceState(null, null, '#' + lang);
+        } else {
+            location.hash = '#' + lang;
+        }
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+    }
+
+    // Auto-detect language on initial page load
+    (function initLanguage() {
+        // 1. Check URL hash (e.g. #en, #fr, #ja)
+        const hash = window.location.hash.replace('#', '').toLowerCase();
+        const supported = ['es', 'en', 'fr', 'it', 'pt', 'ja'];
+
+        if (supported.includes(hash)) {
+            switchLang(hash, null);
+            return;
+        }
+
+        // 2. Check browser navigator language
+        const userLang = (navigator.language || navigator.userLanguage || 'es').slice(0, 2).toLowerCase();
+        if (supported.includes(userLang)) {
+            switchLang(userLang, null);
+        } else {
+            // Default to English for international visitors, or Spanish
+            switchLang('es', null);
+        }
+    })();
+</script>
+
 </body>
 </html>
